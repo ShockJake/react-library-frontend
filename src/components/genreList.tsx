@@ -7,7 +7,7 @@ import "../App.css";
 const GenreList: React.FC = () => {
   const [genres, setGenres] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [activeCellName, setActiveCell] = useState<string>("");
+  const [activeCellName, setActiveCellName] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const GenreList: React.FC = () => {
           key={genre}
           genre={genre}
           currentActiveCell={activeCellName}
-          activateCell={setActiveCell}
+          activateCell={setActiveCellName}
         />
       ))}
     </div>

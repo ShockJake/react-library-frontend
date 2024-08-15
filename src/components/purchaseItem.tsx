@@ -15,7 +15,7 @@ const PurchaseItem: React.FC<PurchaseProps> = ({ purchase }) => (
         </h6>
         <span>
           {purchase.books.map((book) => (
-            <div>
+            <div key={book.title}>
               <span>
                 <strong>{book.title}</strong> {book.author}
               </span>
