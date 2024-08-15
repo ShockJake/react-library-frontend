@@ -1,9 +1,7 @@
 # React Front-End
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ShockJake_react-library-frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ShockJake_react-library-frontend)
-
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ShockJake_react-library-frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ShockJake_react-library-frontend)
-
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ShockJake_react-library-frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ShockJake_react-library-frontend)
 
 Simple Front-End for Book Shop.
