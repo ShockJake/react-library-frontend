@@ -11,7 +11,7 @@ Allows to:
 
 ## Prerequisites
 
-- **NodeJS** - v18.20.4
+- **NodeJS** > v18.20.4
 - Git
 
 ## Installation and Running
@@ -19,10 +19,16 @@ Allows to:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/ShockJake/ebiznes-uj; cd react-frontend
+   git clone https://github.com/ShockJake/react-library-frontend.git; cd react-library-frontend
    ```
 
-2. Run the application using NPM:
+2. Install dependecies:
+
+   ```shell
+   npm install
+   ```
+
+3. Run the application using NPM:
 
    ```shell
    npm start
