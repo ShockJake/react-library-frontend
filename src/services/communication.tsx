@@ -59,6 +59,36 @@ export const buyBooks = async (books: Book[]): Promise<void> => {
   await doRequest<void>(url, "buying books", body, "post");
 };
 
+export const register = async (
+  username: string,
+  password: string,
+): Promise<void> => {
+  const url = `${base_url}/register`;
+  const body = JSON.stringify({
+    name: username,
+    password: password,
+  });
+  await doRequest<void>(url, "Registration", body, "post");
+};
+
+export const login = async (
+  username: string,
+  password: string,
+): Promise<boolean> => {
+  const url = `${base_url}/login`;
+  const body = JSON.stringify({
+    name: username,
+    password: password,
+  });
+  const responseBody = await doRequest<any>(url, "Login", body, "post");
+  try {
+    localStorage.setItem("auth-token", responseBody.token);
+  } catch (error) {
+    return false;
+  }
+  return true;
+};
+
 async function doRequest<T>(
   url: string,
   purpose: string,
@@ -78,19 +108,32 @@ function createRequestData(
   body: string | null,
   method: string,
 ): any {
-  if (body === null) {
-    return {
-      method: method,
-      timeout: 20000,
-      with_credentials: true,
-      url: url,
-    };
-  }
-  return {
-    data: body,
+  var result: any = {
     method: method,
     timeout: 20000,
     with_credentials: true,
     url: url,
   };
+
+  if (body !== null) {
+    result = {
+      ...result,
+      data: body,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+  }
+  const token = localStorage.getItem("auth-token");
+  if (token !== null) {
+    result = {
+      ...result,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    };
+  }
+
+  return result;
 }

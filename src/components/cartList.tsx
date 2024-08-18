@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Book } from "../data/book";
 import { getCart, clearCart, checkoutCart } from "../services/communication";
-import loadingLogo from "../star-fill.svg";
+import loadingLogo from "../gear-fill.svg";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import CartItem from "./cartItem";

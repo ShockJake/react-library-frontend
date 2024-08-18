@@ -4,7 +4,7 @@ import BookItem from "./bookItem";
 import { Book } from "../data/book";
 import { useParams } from "react-router-dom";
 import "../App.css";
-import loadingLogo from "../star-fill.svg";
+import loadingLogo from "../gear-fill.svg";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 

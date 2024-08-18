@@ -16,7 +16,7 @@ const GenreItem: React.FC<GenreItemProps> = ({
   let backgroundColorClass = "";
   let textColor = "#212529";
 
-  if (genre == currentActiveCell) {
+  if (genre === currentActiveCell) {
     backgroundColorClass = "active";
     textColor = "white";
   }

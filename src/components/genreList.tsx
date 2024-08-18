@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchGenres } from "../services/communication";
 import GenreItem from "./genreItem";
-import loadingLogo from "../star-fill.svg";
+import loadingLogo from "../gear-fill.svg";
 import "../App.css";
 
 const GenreList: React.FC = () => {

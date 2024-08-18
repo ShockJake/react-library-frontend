@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchPurchases } from "../services/communication";
 import PurchaseItem from "./purchaseItem";
 import { Purchase } from "../data/purchase";
-import loadingLogo from "../star-fill.svg";
+import loadingLogo from "../gear-fill.svg";
 
 const PurchaseList: React.FC = () => {
   const [purchases, setPurchases] = useState<Purchase[]>([]);
