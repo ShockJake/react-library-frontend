@@ -1,10 +1,10 @@
 FROM ubuntu:24.10
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh \
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh && \
     apt-get update && \
     apt-get install -y curl build-essential && \
-    apt-get clean \
+    apt-get clean && \
     mkdir -p /usr/local/nvm
 ENV NVM_DIR=/usr/local/nvm
 ENV NODE_VERSION=v20.15.1

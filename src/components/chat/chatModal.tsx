@@ -59,7 +59,8 @@ const ChatModal: React.FC<ChatModalProps> = ({ show, handleClose }) => {
   const handleReturningToStartState = (text: string) => {
     console.log("Got response: ", text);
     messages.push({ id: messages.length, sender: "assistant", text: text });
-    setMessages(messages);
+    const updatedMessages = messages;
+    setMessages(updatedMessages);
     setReadOnly(false);
     setLoading(false);
   };
@@ -69,7 +70,8 @@ const ChatModal: React.FC<ChatModalProps> = ({ show, handleClose }) => {
       return;
     }
     messages.push({ id: messages.length, sender: "user", text: inputValue });
-    setMessages(messages);
+    const updatedMessages = messages;
+    setMessages(updatedMessages);
     sendMessage(inputValue, handleReturningToStartState);
     setInputValue("");
     setReadOnly(true);

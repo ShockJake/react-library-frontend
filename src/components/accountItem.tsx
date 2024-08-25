@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import "./account/unauthenticatedItem";
 import UnauthenticatedItem from "./account/unauthenticatedItem";
 
 const AccountItem: React.FC = () => {
