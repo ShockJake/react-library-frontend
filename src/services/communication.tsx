@@ -108,7 +108,7 @@ function createRequestData(
   body: string | null,
   method: string,
 ): any {
-  var result: any = {
+  let result: any = {
     method: method,
     timeout: 20000,
     with_credentials: true,
